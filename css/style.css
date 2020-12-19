@@ -1,0 +1,295 @@
+body, html {
+  margin: 0;
+  }
+  
+.page__background  {
+  height: 1164px;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+  
+.menu {
+  overflow-x: hidden;
+  padding-left: 100px;
+}
+  
+.menu__title {
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 57px;
+  font-weight: 700;
+  line-height: 67px;
+  margin: 0;
+  padding: 129px 0 0 0;
+}
+  
+.menu__subtitle {
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 9px 0 62px 8px;
+}
+  
+.pre {
+  display: inline-block;
+  width: 45px;
+}
+  
+.menu__option {
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto';
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 59px;
+  margin: 0px 0 23px 0;
+}
+  
+li {
+  list-style: none;
+}
+  
+.selected {
+  background: #D62B2E;
+  content: "";
+  display: inline-block;
+  height: 18px;
+  margin: 0 auto;
+  vertical-align: super;
+  width: 18px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+  
+.check {
+  height: 18px;
+  margin-top: 0;
+}
+  
+.menu__bottom {
+  overflow: hidden;
+}
+  
+.menu__btn {
+  background: #D62B2E;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 32px;
+  height: 95px;
+  line-height: 37px;
+  margin-bottom: 20px;
+  margin-top: 92px;
+  vertical-align: top;
+  width: 352px;
+}
+
+.menu__btn:hover {
+  -webkit-transform: translate(2px, 1px);
+          transform: translate(2px, 1px);
+  opacity: .9;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+  
+.menu__cards, .menu__card {
+  display: inline-block;
+  position: fixed;
+}
+  
+.menu__card_front {
+  padding-left: 140px;
+}
+  
+.displayNone {
+  display: none;
+}
+  
+.game {
+  height: 100%;
+  text-align: center;
+}
+  
+.cardsIn1 {
+  padding-top: calc(50vh - 345px / 2);
+}
+  
+.cardsIn2 {
+  padding-top: calc(50vh - 345px);
+}
+  
+.game__card {
+  cursor: pointer;
+  margin: 15px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+  
+.game__card:hover {
+  box-shadow: 15px 15px 15px rgba(0,0,0,0.5);
+  transform: translateY(-30px) rotateZ(-2deg);;
+}
+  
+.scene {
+  display: inline-block;
+  perspective: 1000px;
+}
+  
+.card {
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  width: 100%;
+}
+  
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+  
+.game__card_back {
+  transform: rotateY( 180deg );
+}
+  
+.game__card_front {
+  position: absolute;
+}
+  
+.cardBlockIn {
+  display: inline-block;
+}
+  
+.cardBlockOut {
+  display: block;
+}
+  
+@media (max-width: 500px) {
+  
+  .page__background  {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .menu {
+    padding-left: 10%;
+  }
+  
+  .menu__title {
+    padding-top: 10%;
+  }
+  
+  .menu__subtitle {
+    font-size: 15px;
+    margin-bottom: 5%;
+  }
+  
+  .menu__option {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  
+  .menu__btn {
+    margin-bottom: 0;
+    margin-top: 10%;
+    width: 90%;
+  }
+  
+  .menu__cards {
+    display: none;
+  }
+  
+  .game__card {
+    height: 125px;
+    margin: 10px;
+    margin-bottom: 0;
+  }
+  
+}
+  
+@media (min-width: 500px) {
+  
+  .page__background  {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+  }
+  
+  .menu__btn {
+    margin-bottom: 80px;
+  }
+  
+  .menu__cards, .menu__card {
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .game__card {
+    margin: 10px;
+    margin-bottom: 0;
+  }
+}
+  
+@media (min-width: 800px) {
+  
+  .page__background  {
+    width: 1745px;
+  }
+  
+  .menu__btn {
+    margin-bottom: 80px;
+  }
+  
+  .menu__cards, .menu__card {
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .game__card {
+    width: 180px;
+  }
+}
+  
+@media (min-width: 1000px) {
+  
+  .menu__btn {
+    margin-right: 400px;
+  }
+}
+  
+@media (min-width: 1200px) {
+  
+  .page__background  {
+    height: 100%;
+    }
+}
+  
+@media (min-width: 1400px) {
+  
+  .menu__btn {
+    margin-right: 401px;
+  }
+}
+  
+@media (min-width: 1600px) {
+  
+  .page__background  {
+    width: 100%;
+  }
+}
+  
+@media (min-width: 1745px) {
+  
+  .page__background  {
+    width: 100%;
+  }
+}

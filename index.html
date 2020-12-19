@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Найди баг</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+</head>
+<body>
+
+  <header class="header">
+    <img src="img/Background.png" alt="Фон" class="page__background">
+  </header>
+
+  <section class="menu" id='menu'>
+    <h1 class="menu__title">Выберите уровень сложности:</h1>
+    <h5 class="menu__subtitle">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</h5>
+    <div class="menu__options">
+      <div>
+        <div class='pre'>
+          <h2 class='check selected' id='easyCheck'></h2>
+        </div>
+        <h2 class="menu__option" id='easyLvl'>Простой</h2>
+      </div>
+      <div>
+        <div class='pre'>
+          <h2 class='check' id='midCheck'></h2>
+        </div>
+        <h2 class='menu__option' id='midLvl'>Средний</h2>
+      </div>
+      <div>
+        <div class='pre'>
+          <h2 class='check' id='heavyCheck'></h2>
+        </div>
+        <h2 class="menu__option" id='heavyLvl'>Сложный</h2>
+      </div>
+    </div>
+    <div class='menu__bottom'>
+      <button type="button" class="menu__btn" id='confirmBtn'>Начать игру</button>
+      <div class='menu__cards'>
+        <img src="img/cardBack.png" alt="Задняя карта" class="menu__card menu__card_back">
+        <img src="img/cardFront.png" alt="Передняя карта" class="menu__card menu__card_front">
+      </div>
+    </div>
+  </section>
+
+  <section class="game displayNone" id='game'>
+    <div class='cardsIn1' id='cardsIn'>
+    </div>
+  </section>
+
+  <script src='./script.js'></script>
+</body>
+</html>
